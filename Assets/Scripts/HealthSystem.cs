@@ -19,13 +19,13 @@ public class HealthSystem : MonoBehaviour
 
     void Update()
     {
-        if (health > numberOfHearts)
+        if (Globals.playerHealth > Globals.numberOfHearts)
         {
-            health = numberOfHearts;
+            Globals.playerHealth = Globals.numberOfHearts;
         }
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if (i < Globals.playerHealth)
             {
                 if (hearts[i] != null)
                 {
@@ -42,7 +42,7 @@ public class HealthSystem : MonoBehaviour
                 }
 
             }
-            if (i < numberOfHearts)
+            if (i < Globals.numberOfHearts)
             {
                 if (hearts[i] != null)
                 {
@@ -53,7 +53,7 @@ public class HealthSystem : MonoBehaviour
             }
             else
             {
-                if (i < numberOfHearts)
+                if (i < Globals.numberOfHearts)
                 {
                     hearts[i].enabled = false;
                 }
