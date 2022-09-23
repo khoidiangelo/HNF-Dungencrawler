@@ -1,18 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health;
+    public int maxHealth;
+    public int numberOfHearts;
+    public int healPotion;
+    public Image[] hearts;
+    public Sprite emptyHeart;
+    public Sprite fullHeart;
+    private void Start()
     {
-        
+        health = maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (health > numberOfHearts)
+        {
+            health = numberOfHearts;
+        }
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                if (hearts[i] != null)
+                {
+                    hearts[i].sprite = fullHeart;
+                }
+
+
+            }
+            else
+            {
+                if (hearts[i] != null)
+                {
+                    hearts[i].sprite = emptyHeart;
+                }
+
+            }
+            if (i < numberOfHearts)
+            {
+                if (hearts[i] != null)
+                {
+                    hearts[i].enabled = true;
+                }
+
+
+            }
+            else
+            {
+                if (i < numberOfHearts)
+                {
+                    hearts[i].enabled = false;
+                }
+
+            }
+
+        }
     }
 }
