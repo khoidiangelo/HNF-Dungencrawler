@@ -12,6 +12,9 @@ public class HealthSystem : MonoBehaviour
     public Image[] hearts;
     public Sprite emptyHeart;
     public Sprite fullHeart;
+
+    public GameObject deadPanel;
+    
     private void Start()
     {
         health = maxHealth;
@@ -62,6 +65,15 @@ public class HealthSystem : MonoBehaviour
             }
 
         }
+        if(Globals.playerHealth <= 0)
+        {
+            Globals.dead = 1;
+            if(Globals.dead == 1)
+            {
+                Time.timeScale = 1;
+                deadPanel.SetActive(true);
+            }
+        }
     }
     void HealPotion()
     {
@@ -77,6 +89,10 @@ public class HealthSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("enemyAttack"))
         {
             Globals.playerHealth -= 1;
+        }
+        if(collision.gameObject.CompareTag("border"))
+        {
+            Globals.playerHealth -= 3;
         }
     }
     

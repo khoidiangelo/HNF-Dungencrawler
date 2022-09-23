@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class General : MonoBehaviour
 {
+    public void Update()
+    {
+        
+    }
     private void OnApplicationQuit()
     {
 
