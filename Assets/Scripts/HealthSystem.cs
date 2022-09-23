@@ -19,6 +19,7 @@ public class HealthSystem : MonoBehaviour
 
     void Update()
     {
+        HealPotion();
         if (Globals.playerHealth > Globals.numberOfHearts)
         {
             Globals.playerHealth = Globals.numberOfHearts;
@@ -62,4 +63,22 @@ public class HealthSystem : MonoBehaviour
 
         }
     }
+    void HealPotion()
+    {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Globals.playerHealth += 1;
+            Globals.healPotion -= 1;
+        }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemyAttack"))
+        {
+            Globals.playerHealth -= 1;
+        }
+    }
+    
+
 }
