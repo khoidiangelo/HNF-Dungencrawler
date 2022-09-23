@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-   
+    public float moveSpeed = 5;
+    public Rigidbody2D rb;
 
-    private void Start()
-    {
-   
-    }
+    Vector2 movement;
+
     void Update()
     {
-        Moving();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
-    void Moving()
+
+    void FixedUpdate()
     {
-
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
-
 }
