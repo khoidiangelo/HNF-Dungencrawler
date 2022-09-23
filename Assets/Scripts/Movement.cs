@@ -16,8 +16,9 @@ public class Movement : MonoBehaviour
     {
 
         moveInputx = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInputx * moveSpeed, rb.velocity.y);
-        rb.velocity = new Vector2(moveInputy * moveSpeed, rb.velocity.x);
+        moveInputy = Input.GetAxisRaw("Vertical");
+        rb.velocity = new Vector2(moveInputx * moveSpeed, rb.velocity.x);
+        rb.velocity = new Vector2(moveInputy * moveSpeed, rb.velocity.y);
         
 
     }
