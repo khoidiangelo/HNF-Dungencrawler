@@ -10,13 +10,15 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
     internal Animator animator;
+    internal Animator swordAnimator;
     public Vector2 Direction;
-
+    public GameObject Sword;
     private void Awake()
     {
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        swordAnimator = Sword.GetComponent<Animator>();
     }
     void Update()
     {
