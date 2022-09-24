@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon Tim.unity
     guid: 3c2db06a89f9bec0ead994875f16b539
+  - enabled: 1
+    path: Assets/Scenes/Dungeon selina.unity
+    guid: 0dec7e3282e62e943ae48999c86e9969
   m_configObjects: {}
