@@ -1702,6 +1702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 393376537}
+  Max_Offset: 0
+  speed: 100
 --- !u!114 &845624410
 MonoBehaviour:
   m_ObjectHideFlags: 0
