@@ -12,13 +12,15 @@ public class Movement : MonoBehaviour
    
     void Awake()
     {
-       // animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-     //   animator.SetFloat("horizontal speed", movement.x);
+        animator.SetFloat("horizontal speed", movement.x);
+        animator.SetFloat("vertical speed", movement.y);
+    }
     }
 
     void FixedUpdate()
