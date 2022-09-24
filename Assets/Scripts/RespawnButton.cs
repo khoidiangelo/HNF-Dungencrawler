@@ -8,6 +8,7 @@ public class RespawnButton : MonoBehaviour
     public GameObject deadPanel;
     public GameObject respawnPoint;
     public GameObject player;
+    public int nextDungeon;
     public void Respawn()
     {
         nextDungeon = Random.Range(1, 4);
