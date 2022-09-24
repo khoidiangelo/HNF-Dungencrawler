@@ -9,11 +9,20 @@ public class Enemy_Contorler : MonoBehaviour
     public NavMeshAgent agent;
     public int health;
     public Transform Sprite;
+    public Animator animator;
+    private Vector2 movement;
+
+
+
     protected void Move()
     {
+        Debug.Log(Vector3.forward);
+        movement = Vector3.forward;
+        Debug.Log(movement);
+        animator.SetFloat("horizontal speed", movement.x);
+        animator.SetFloat("vertical speed",  movement.y);
         agent.destination = target.position;
         Sprite.position = this.gameObject.transform.position;
-
     }
     public void Damage(int damage)
     {
