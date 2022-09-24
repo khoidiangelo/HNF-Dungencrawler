@@ -9,6 +9,8 @@ public class Enemy_Contorler : MonoBehaviour
     public NavMeshAgent agent;
     public int health;
     public Transform Sprite;
+    public GameObject player;
+    
     protected void Move()
     {
         agent.destination = target.position;
@@ -20,6 +22,9 @@ public class Enemy_Contorler : MonoBehaviour
         this.health -= damage;
         if (health < 0)
         {
+            var currentScore = player.GetComponent<General>().currentScore;
+            currentScore += 50;
+            player.GetComponent<General>().currentScore = currentScore;
             Destroy(this.transform.parent.gameObject);
         }
     }
