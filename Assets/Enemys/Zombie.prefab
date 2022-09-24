@@ -190,7 +190,8 @@ MonoBehaviour:
   target: {fileID: 0}
   agent: {fileID: 3285254717408122241}
   health: 5
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 3285254716628132184}
+  animator: {fileID: 3285254717408122246}
   damage: 1
 --- !u!58 &3285254717408122247
 CircleCollider2D:
