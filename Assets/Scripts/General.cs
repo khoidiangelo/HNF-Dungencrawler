@@ -8,22 +8,25 @@ public class General : MonoBehaviour
     private bool pauseIsActive = false;
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && pauseIsActive == false)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0;
-            pauseIsActive = true;
-
-        }
-        if(Input.GetKeyDown(KeyCode.Escape) && pauseIsActive == true)
-        {
-            pausePanel.SetActive(false);
-            Time.timeScale = 1;
-            pauseIsActive = false;
+            if(pauseIsActive == false)
+            {
+                Debug.Log("pause");
+                pausePanel.SetActive(true);
+                Time.timeScale = 0;
+                pauseIsActive = true;
+            }
+            else
+            {
+                Debug.Log("unpause");
+                pausePanel.SetActive(false);
+                Time.timeScale = 1;
+                pauseIsActive = false;
+            }
 
         }
         
-       
         
     }
     private void OnApplicationQuit()
