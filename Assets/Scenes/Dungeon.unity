@@ -242,7 +242,7 @@ MonoBehaviour:
   Heart_Sprite: {fileID: 3693794014852366150, guid: bd6d4d046ec835342b9b5f738bf7b644, type: 3}
   emptyHeart_sprite: {fileID: 21300000, guid: 54602ae83dcfc8d47881e2d9fc6c3505, type: 3}
   fullHeart_sprite: {fileID: 21300000, guid: 8ab22ae6649459a43a8db89830c1ecf4, type: 3}
-  heart_offset: 75
+  heart_offset: 40
   deadPanel: {fileID: 2068893315}
 --- !u!114 &19396634
 MonoBehaviour:
@@ -658,6 +658,7 @@ MonoBehaviour:
   target: {fileID: 1517392441}
   Max_Offset: 10
   speed: 2
+  doShit: 0
 --- !u!114 &139181185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4766,7 +4767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1239456951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,7 +5586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1611202932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5750,7 +5751,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1663361635
@@ -10665,7 +10666,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 16
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17618,8 +17619,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 975588166, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 52
     m_Data: {fileID: -2047451628, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
   - m_RefCount: 4
@@ -17630,8 +17631,8 @@ Tilemap:
     m_Data: {fileID: 1627864410, guid: ebd59faae4c5de1048334a2661fa7c5d, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 975588166, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1138
     m_Data:
