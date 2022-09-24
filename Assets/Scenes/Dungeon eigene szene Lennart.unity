@@ -483,7 +483,7 @@ MonoBehaviour:
   - {fileID: 1119102819}
   emptyHeart: {fileID: 21300000, guid: 54602ae83dcfc8d47881e2d9fc6c3505, type: 3}
   fullHeart: {fileID: 21300000, guid: 8ab22ae6649459a43a8db89830c1ecf4, type: 3}
-  deadPanel: {fileID: 0}
+  deadPanel: {fileID: 956331032}
 --- !u!50 &484148196
 Rigidbody2D:
   serializedVersion: 4
@@ -648,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &956331033
 RectTransform:
   m_ObjectHideFlags: 0
