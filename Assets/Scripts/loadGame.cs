@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class loadGame : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class loadGame : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void onClicked()
+    {
+        SceneManager.LoadScene(1);
     }
 }
