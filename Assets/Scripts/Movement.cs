@@ -9,16 +9,23 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
+    internal Animator animator;
     public Vector2 Direction;
 
     private void Awake()
     {
         Instance = this;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("horizontal speed", movement.x);
+        animator.SetFloat("vertical speed", movement.y);
+        
         if (movement.sqrMagnitude > 0)
         {
             if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
