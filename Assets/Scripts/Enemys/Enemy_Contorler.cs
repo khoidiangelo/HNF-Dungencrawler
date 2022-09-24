@@ -8,9 +8,12 @@ public class Enemy_Contorler : MonoBehaviour
     public Transform target;
     public NavMeshAgent agent;
     public int health;
+    public Transform Sprite;
     protected void Move()
     {
         agent.destination = target.position;
+        Sprite.position = this.gameObject.transform.position;
+
     }
     public void Damage(int damage)
     {
@@ -20,4 +23,5 @@ public class Enemy_Contorler : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 }
