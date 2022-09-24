@@ -4884,7 +4884,6 @@ MonoBehaviour:
   invincibleTime: 0.5
   numberOfHearts: 3
   current_Health: 3
-  storred_healPotions: 0
   invinceileCount: 0
 --- !u!114 &1517392439
 MonoBehaviour:
@@ -11408,7 +11407,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 18
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16671,10 +16670,10 @@ Tilemap:
     m_Data: {fileID: -1079074202, guid: 562900aa0015de04ead4c5a1cd050463, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 2051990770, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 2051990770, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1112
     m_Data:
