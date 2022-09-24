@@ -1704,6 +1704,7 @@ MonoBehaviour:
   target: {fileID: 393376537}
   Max_Offset: 0
   speed: 100
+  doShit: 0
 --- !u!114 &845624410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1857,7 @@ GameObject:
   - component: {fileID: 1014332513}
   - component: {fileID: 1014332512}
   - component: {fileID: 1014332511}
+  - component: {fileID: 1014332515}
   m_Layer: 5
   m_Name: startscene button
   m_TagString: Untagged
@@ -1928,16 +1930,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1014332512}
-        m_TargetAssemblyTypeName: RespawnButton, Assembly-CSharp
-        m_MethodName: Respawn
-        m_Mode: 1
+      - m_Target: {fileID: 1014332515}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1014332512
@@ -1993,6 +1995,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014332509}
   m_CullTransparentMesh: 1
+--- !u!114 &1014332515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014332509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824d8abf132f3a429c2c9d97cc14e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087380949
 GameObject:
   m_ObjectHideFlags: 0
