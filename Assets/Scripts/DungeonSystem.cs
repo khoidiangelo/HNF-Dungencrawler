@@ -21,7 +21,7 @@ public class DungeonSystem : MonoBehaviour
 
         if(gonext)
         {
-            nextDungeon = Random.Range(1, 2);
+            nextDungeon = Random.Range(1, 2, 3);
             Debug.Log(nextDungeon);
             SceneManager.LoadScene(nextDungeon);
             
