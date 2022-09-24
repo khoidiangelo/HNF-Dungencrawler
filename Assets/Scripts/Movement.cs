@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         animator.SetFloat("horizontal speed", movement.x);
         animator.SetFloat("vertical speed", movement.y);
     }
-    }
+    
 
     void FixedUpdate()
     {
