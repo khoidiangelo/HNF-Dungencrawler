@@ -22,7 +22,7 @@ public class HealthSystem : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             Globals.playerHealth -= 1;
         }
