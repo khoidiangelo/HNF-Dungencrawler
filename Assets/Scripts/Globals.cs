@@ -9,6 +9,7 @@ public static class Globals
     public static int healPotion;
     public static int dead;
     public static float highScore;
+    public static float currentScore;
 
 
     public static void Save()
@@ -18,6 +19,7 @@ public static class Globals
         PlayerPrefs.SetInt("healPotion", healPotion);
         PlayerPrefs.SetInt("dead", dead);
         PlayerPrefs.SetFloat("highScore", highScore);
+        PlayerPrefs.SetFloat("currentScore", currentScore);
 
     }
     public static void Load()
@@ -27,6 +29,7 @@ public static class Globals
         healPotion = PlayerPrefs.GetInt("healPotion", 1);
         dead = PlayerPrefs.GetInt("dead", 0);
         highScore = PlayerPrefs.GetFloat("highScore", highScore);
+        currentScore = PlayerPrefs.GetFloat("currentScore", 0);
     }
     [RuntimeInitializeOnLoadMethod]
     static void Startup()

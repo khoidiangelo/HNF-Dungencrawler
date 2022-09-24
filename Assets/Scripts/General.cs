@@ -40,10 +40,11 @@ public class General : MonoBehaviour
     }
     void HighScoreSystem()
     {
-        currentScore += Time.deltaTime;
-        if(currentScore > Globals.highScore)
+        Globals.currentScore += Time.deltaTime;
+        if(Globals.currentScore > Globals.highScore)
         {
-            Globals.highScore = currentScore;
+            
+            Globals.highScore = Globals.currentScore;
         }
     }
 }
