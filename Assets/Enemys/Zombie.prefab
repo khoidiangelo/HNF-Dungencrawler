@@ -210,7 +210,11 @@ MonoBehaviour:
   agent: {fileID: 3285254717408122241}
   health: 5
   Sprite: {fileID: 3285254716628132184}
+<<<<<<< HEAD
   animator: {fileID: 1340250016651899646}
+=======
+  animator: {fileID: 3285254717408122246}
+>>>>>>> 362da9035a385ec3de6a3c6ebc709459b3645fdf
   damage: 1
 --- !u!58 &3285254717408122247
 CircleCollider2D:
