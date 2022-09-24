@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     }
     public void has_died()
     {
+        Globals.healPotion = 0;
         Time.timeScale = 1;
         deadPanel.SetActive(true);
     }
