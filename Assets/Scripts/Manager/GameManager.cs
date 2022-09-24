@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject deadPanel;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     }
     public void has_died()
     {
-        //to do the die Stuff
+        Time.timeScale = 1;
+        deadPanel.SetActive(true);
     }
 }
