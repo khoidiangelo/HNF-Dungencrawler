@@ -229,13 +229,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Zombies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 140807084}
+  - {fileID: 707860963}
+  - {fileID: 1340149668}
+  - {fileID: 1533283479}
+  - {fileID: 1826556369}
 --- !u!4 &89009556
 Transform:
   m_ObjectHideFlags: 0
@@ -384,6 +382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+--- !u!1 &140807084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+  m_PrefabInstance: {fileID: 140807083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &263753747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 857104900}
+  Max_Offset: 0
+  speed: 0
+  doShit: 0
 --- !u!114 &525548609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,6 +1780,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+--- !u!1 &707860963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+  m_PrefabInstance: {fileID: 707860962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712478204
 GameObject:
   m_ObjectHideFlags: 0
@@ -14081,6 +14092,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+--- !u!1 &1340149668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+  m_PrefabInstance: {fileID: 1340149667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1412688341
 GameObject:
   m_ObjectHideFlags: 0
@@ -17443,6 +17459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+--- !u!1 &1533283479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+  m_PrefabInstance: {fileID: 1533283478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1561689272
 GameObject:
   m_ObjectHideFlags: 0
@@ -17536,6 +17557,7 @@ GameObject:
   - component: {fileID: 1642704681}
   - component: {fileID: 1642704680}
   - component: {fileID: 1642704679}
+  - component: {fileID: 1642704683}
   m_Layer: 5
   m_Name: startscene button
   m_TagString: Untagged
@@ -17608,16 +17630,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1642704680}
-        m_TargetAssemblyTypeName: RespawnButton, Assembly-CSharp
-        m_MethodName: Respawn
-        m_Mode: 1
+      - m_Target: {fileID: 1642704683}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1642704680
@@ -17673,6 +17695,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642704677}
   m_CullTransparentMesh: 1
+--- !u!114 &1642704683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642704677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824d8abf132f3a429c2c9d97cc14e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1676999719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17976,6 +18010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+--- !u!1 &1826556369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
+  m_PrefabInstance: {fileID: 1826556368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833232257
 GameObject:
   m_ObjectHideFlags: 0

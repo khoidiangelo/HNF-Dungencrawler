@@ -12,6 +12,7 @@ public class Enemy_Contorler : MonoBehaviour
     public Animator animator;
     private Vector3 movement;
     private Vector3 prevPos;
+    public GameObject player;
 
 
     private void Awake()
@@ -46,6 +47,9 @@ public class Enemy_Contorler : MonoBehaviour
         this.health -= damage;
         if (health < 0)
         {
+          
+            target.gameObject.GetComponent<General>().currentScore += 50;
+            
             Destroy(this.transform.parent.gameObject);
         }
     }

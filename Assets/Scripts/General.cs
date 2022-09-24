@@ -7,8 +7,11 @@ public class General : MonoBehaviour
     public GameObject pausePanel;
     private bool pauseIsActive = false;
     public float currentScore;
-    
-    
+
+    void Awake()
+    {
+        Globals.player = this.gameObject;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -37,12 +40,14 @@ public class General : MonoBehaviour
 
         Globals.Save();
         Debug.Log("Save Game");
+        Globals.currentScore = currentScore;
     }
     void HighScoreSystem()
     {
         currentScore += Time.deltaTime;
         if(currentScore > Globals.highScore)
         {
+            
             Globals.highScore = currentScore;
         }
     }
