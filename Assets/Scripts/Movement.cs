@@ -19,8 +19,11 @@ public class Movement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-      //  animator.SetFloat("horizontal speed", movement.x);
-      //  animator.SetFloat("vertical speed", movement.y);
+
+        animator.SetFloat("horizontal speed", movement.x);
+        animator.SetFloat("vertical speed", movement.y);
+
+
     }
     
 
