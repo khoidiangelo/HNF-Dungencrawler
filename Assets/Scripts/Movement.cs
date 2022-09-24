@@ -8,11 +8,17 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
 
     Vector2 movement;
-
+    internal Animator animator;
+   
+    void Awake()
+    {
+       // animator = GetComponent<Animator>();
+    }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+     //   animator.SetFloat("horizontal speed", movement.x);
     }
 
     void FixedUpdate()
