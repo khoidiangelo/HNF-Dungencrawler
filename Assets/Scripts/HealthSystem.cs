@@ -76,6 +76,7 @@ public class HealthSystem : MonoBehaviour
             Globals.dead = 1;
             if(Globals.dead == 1)
             {
+                Globals.healPotion = 0;
                 Time.timeScale = 0;
                 deadPanel.SetActive(true);
 
