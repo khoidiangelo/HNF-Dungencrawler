@@ -9,7 +9,6 @@ public class Player_Attack_System : MonoBehaviour
     public float Attack_Range_Sword;
     public int Attack_Angle_Sword;
     public int Attack_Damage_Sword;
-    public GameObject Thing;
     // Start is called before the first frame update
     void Start()
     {

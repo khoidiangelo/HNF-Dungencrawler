@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class playSwordAnimation : MonoBehaviour
 {
-    internal Animator animator;
+    public GameObject Sword;
+    private Animator animator;
     // Start is called before the first frame update
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = Sword.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("ifAttacking", true);
+
+            animator.SetInteger("Horrizontal" ,(int)Movement.Instance.Direction.x);
+
+            animator.SetInteger("Vertical" , (int)Movement.Instance.Direction.y);
+
+
+            animator.SetTrigger("attack");
         }
     }
 }
