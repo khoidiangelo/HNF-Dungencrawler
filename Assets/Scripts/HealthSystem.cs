@@ -26,7 +26,7 @@ public class HealthSystem : MonoBehaviour
         {
             Globals.playerHealth -= 1;
         }
-        Debug.Log(Globals.playerHealth);
+        
         HealPotion();
 
         if (Globals.playerHealth > Globals.numberOfHearts)
@@ -78,6 +78,7 @@ public class HealthSystem : MonoBehaviour
             {
                 Time.timeScale = 0;
                 deadPanel.SetActive(true);
+
             }
         }
         
