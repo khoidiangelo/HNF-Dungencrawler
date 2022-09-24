@@ -15,7 +15,6 @@ public class HealthSystem : MonoBehaviour
 
     public int current_Health;
 
-    public int storred_healPotions;
 
     public float invinceileCount;
 
@@ -73,8 +72,9 @@ public class HealthSystem : MonoBehaviour
     void check_HealPotion()
     {
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H) && Globals.healPotion > 0 && current_Health != numberOfHearts)
         {
+            Globals.healPotion -= 1;
             this.DamagePlayer(-1);
         }
     }
