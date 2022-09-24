@@ -233,7 +233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &19396631
 GameObject:
@@ -1082,10 +1082,9 @@ Transform:
   m_LocalPosition: {x: -2.78, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1534118610}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519900242
 GameObject:
@@ -5082,6 +5081,7 @@ MonoBehaviour:
   rb: {fileID: 1517392436}
   Direction: {x: 0, y: 0}
   Sword: {fileID: 1663247177}
+  isHitting: 0
 --- !u!212 &1517392440
 SpriteRenderer:
   m_ObjectHideFlags: 0
