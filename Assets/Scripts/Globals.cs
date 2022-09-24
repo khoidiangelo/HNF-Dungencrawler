@@ -10,6 +10,7 @@ public static class Globals
     public static int dead;
     public static float highScore;
     public static float currentScore;
+    public static GameObject player;
 
 
     public static void Save()
@@ -36,7 +37,13 @@ public static class Globals
     {
 
         Debug.Log("Load Save File");
+        if(player != null)
+        {
+            currentScore = player.GetComponent<General>()?.currentScore ?? 0;
+        }
+         
         Load();
+        
     }
     
 
