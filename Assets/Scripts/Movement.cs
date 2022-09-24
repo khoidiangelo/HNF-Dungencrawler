@@ -12,23 +12,21 @@ public class Movement : MonoBehaviour
    
     void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("horizontal speed", movement.x);
-        animator.SetFloat("vertical speed", movement.y);
+      //  animator.SetFloat("horizontal speed", movement.x);
+      //  animator.SetFloat("vertical speed", movement.y);
     }
-    }
+    
 
     void FixedUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            // Dash script
-        }
+       
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
