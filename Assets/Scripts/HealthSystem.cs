@@ -37,10 +37,14 @@ public class HealthSystem : MonoBehaviour
 
 
     void Update()
+    {
  
         check_HealPotion();
 
         if (invinceileCount >= 0)
+        {
+            invinceileCount -= Time.deltaTime;
+        }
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -112,8 +116,7 @@ public class HealthSystem : MonoBehaviour
         
     }
 
-
-
+}
     public void DamagePlayer(int damageAmount)
     {
  
@@ -137,6 +140,7 @@ public class HealthSystem : MonoBehaviour
 
         Ui_Controler.instance.render_Hearts(current_Health);
     }
+
     void check_HealPotion()
     {
 
@@ -148,7 +152,3 @@ public class HealthSystem : MonoBehaviour
             this.DamagePlayer(-1);
         }
     }
-   
-    
-
-}
