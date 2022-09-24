@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     internal Animator swordAnimator;
     public Vector2 Direction;
     public GameObject Sword;
+    public bool isHitting;
     private void Awake()
     {
         Instance = this;
@@ -22,6 +23,7 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
