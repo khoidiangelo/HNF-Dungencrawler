@@ -10,7 +10,9 @@ public class RespawnButton : MonoBehaviour
     public GameObject player;
     public void Respawn()
     {
-        SceneManager.LoadScene(1);
+        nextDungeon = Random.Range(1, 4);
+        SceneManager.LoadScene(nextDungeon);
+        Debug.Log(nextDungeon);
         Time.timeScale = 1;
         deadPanel.SetActive(false);
         player.transform.position = respawnPoint.transform.position;
