@@ -21,6 +21,7 @@ public class Player_Attack_System : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
+
             switch (weapon)
             {
                 case Weapons.Sword:

@@ -10,19 +10,35 @@ public class Enemy_Contorler : MonoBehaviour
     public int health;
     public Transform Sprite;
     public Animator animator;
-    private Vector2 movement;
+    private Vector3 movement;
+    private Vector3 prevPos;
 
 
+    private void Awake()
+    {
+        prevPos = transform.position;
+    }
 
     protected void Move()
     {
-        Debug.Log(Vector3.forward);
-        movement = Vector3.forward;
+
+        movement = prevPos - transform.position;
+        movement = Vector3.Normalize(movement);
         Debug.Log(movement);
-        animator.SetFloat("horizontal speed", movement.x);
-        animator.SetFloat("vertical speed",  movement.y);
+
+        if(Mathf.Abs(movement.x) < Mathf.Abs(movement.y))
+        {
+            animator.SetFloat("vertical speed",  movement.y);
+            animator.SetFloat("horizontal speed", 0);
+        }
+        else
+        {
+            animator.SetFloat("horizontal speed", movement.x);
+            animator.SetFloat("vertical speed",  0);
+        }
         agent.destination = target.position;
         Sprite.position = this.gameObject.transform.position;
+        prevPos = transform.position;
     }
     public void Damage(int damage)
     {
