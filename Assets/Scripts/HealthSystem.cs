@@ -1,109 +1,84 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class HealthSystem : MonoBehaviour
 {
-    
-   
-   
-    public int healPotion;
-    public Image[] hearts;
-    public Sprite emptyHeart;
-    public Sprite fullHeart;
+    public static HealthSystem instance;
 
-    public GameObject deadPanel;
-    
+
+    public int max_Health;
+    public float invincibleTime = 0.5f;
+
+    public int numberOfHearts;
+
+    public int current_Health;
+
+    public int storred_healPotions;
+
+    public float invinceileCount;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
-        Globals.playerHealth = Globals.numberOfHearts;
+        current_Health = max_Health;
+
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        check_HealPotion();
+
+        if (invinceileCount >= 0)
         {
-            Globals.playerHealth -= 1;
+            invinceileCount -= Time.deltaTime;
         }
+
         
-        HealPotion();
-
-        if (Globals.playerHealth > Globals.numberOfHearts)
+        if (current_Health <= 0)
         {
-            Globals.playerHealth = Globals.numberOfHearts;
+            GameManager.instance.has_died();
         }
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < Globals.playerHealth)
-            {
-                if (hearts[i] != null)
-                {
-                    hearts[i].sprite = fullHeart;
-                }
-
-
-            }
-            else
-            {
-                if (hearts[i] != null)
-                {
-                    hearts[i].sprite = emptyHeart;
-                }
-
-            }
-            if (i < Globals.numberOfHearts)
-            {
-                if (hearts[i] != null)
-                {
-                    hearts[i].enabled = true;
-                }
-
-
-            }
-            else
-            {
-                if (i < Globals.numberOfHearts)
-                {
-                    hearts[i].enabled = false;
-                }
-
-            }
-
-        }
-        if (Globals.playerHealth <= 0)
-        {
-            Globals.dead = 1;
-            if(Globals.dead == 1)
-            {
-                Globals.healPotion = 0;
-                Time.timeScale = 0;
-                deadPanel.SetActive(true);
-
-            }
-        }
-        
     }
-    void HealPotion()
+
+
+
+    public void DamagePlayer(int damageAmount)
     {
-        if (Input.GetKeyDown(KeyCode.H) && Globals.healPotion > 0 && Globals.playerHealth != 3)
+        if (invinceileCount <= 0)
         {
-            Globals.playerHealth += 1;
-            Globals.healPotion -= 1;
+            current_Health -= damageAmount;
+
+            Ui_Controler.instance.render_take_Damage();
+
+            if (current_Health <= 0)
+            {
+                gameObject.SetActive(false);
+
+                current_Health = 0;
+
+                GameManager.instance.has_died();
+            }
+
+            invinceileCount = invincibleTime;
         }
 
+        Ui_Controler.instance.render_Hearts(current_Health);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void check_HealPotion()
     {
-        if (collision.gameObject.CompareTag("enemyAttack"))
+
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            Globals.playerHealth -= 1;
-        }
-        if(collision.gameObject.CompareTag("border"))
-        {
-            Globals.playerHealth -= 3;
+            this.DamagePlayer(-1);
         }
     }
+   
     
 
 }
