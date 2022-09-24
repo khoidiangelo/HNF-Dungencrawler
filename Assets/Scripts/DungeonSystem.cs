@@ -10,9 +10,18 @@ public class DungeonSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Zombies == null)
+        bool gonext = true;
+        for(int i = 0; i < Zombies.Length; i++)
+            {
+                if(Zombies[i] != null)
+                {
+                    gonext = false;
+                }
+            }
+
+        if(gonext)
         {
-            nextDungeon = Random.Range(1, 2);
+            nextDungeon = Random.Range(1, 2, 3);
             Debug.Log(nextDungeon);
             SceneManager.LoadScene(nextDungeon);
             
