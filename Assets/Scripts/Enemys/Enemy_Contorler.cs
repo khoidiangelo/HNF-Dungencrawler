@@ -20,7 +20,7 @@ public class Enemy_Contorler : MonoBehaviour
         this.health -= damage;
         if (health < 0)
         {
-            Destroy(this.gameObject);
+            Destroy(this.transform.parent.gameObject);
         }
     }
 
