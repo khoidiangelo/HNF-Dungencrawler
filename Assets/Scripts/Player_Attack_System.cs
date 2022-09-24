@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Attack_System : MonoBehaviour
@@ -8,6 +9,7 @@ public class Player_Attack_System : MonoBehaviour
     public float Attack_Range_Sword;
     public int Attack_Angle_Sword;
     public int Attack_Damage_Sword;
+    public GameObject Thing;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,12 @@ public class Player_Attack_System : MonoBehaviour
         Vector2 current_2D_Pos = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
         Collider2D collision = Physics2D.OverlapCircle(current_2D_Pos, Attack_Range_Sword);
         Debug.Log(collision.gameObject.name);
+        //Instantiate(Thing, new Vector3(current_2D_Pos.x + Movement.Instance.Direction.x, Movement.Instance.Direction.y + current_2D_Pos.y, -1f),this.gameObject.transform.rotation);
+        //Instantiate(Thing, new Vector3(collision.gameObject.transform.position.x + Movement.Instance.Direction.x, Movement.Instance.Direction.y + collision.gameObject.transform.position.y, -1f), this.gameObject.transform.rotation);
+        Debug.Log(180-(Vector2.Angle(Movement.Instance.Direction, new Vector2(current_2D_Pos.x - collision.gameObject.transform.position.x, current_2D_Pos.y - collision.gameObject.transform.position.y))));
         //Debug.Log(Vector2.Angle(Movement.Instance.Direction, new Vector2(current_2D_Pos.x - collision.gameObject.transform.position.x, current_2D_Pos.y - collision.gameObject.transform.position.y)));
-        if (Vector2.Angle(Movement.Instance.Direction, new Vector2(current_2D_Pos.x - collision.gameObject.transform.position.x, current_2D_Pos.y - collision.gameObject.transform.position.y))<Attack_Angle_Sword)
+        if ((180f - Vector2.Angle(Movement.Instance.Direction, new Vector2(current_2D_Pos.x - collision.gameObject.transform.position.x, current_2D_Pos.y - collision.gameObject.transform.position.y))) < Attack_Angle_Sword
+            )
         {
             Debug.Log("right Angle");
             if (collision.gameObject.CompareTag("Enemy"))
