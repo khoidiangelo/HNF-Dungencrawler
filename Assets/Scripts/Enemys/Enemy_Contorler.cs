@@ -21,11 +21,12 @@ public class Enemy_Contorler : MonoBehaviour
 
     protected void Move()
     {
-
+        if (target == null)
+        {
+            target = HealthSystem.instance.gameObject.transform;
+        }
         movement = prevPos - transform.position;
         movement = Vector3.Normalize(movement);
-        Debug.Log(movement);
-
         if(Mathf.Abs(movement.x) < Mathf.Abs(movement.y))
         {
             animator.SetFloat("vertical speed",  movement.y);
