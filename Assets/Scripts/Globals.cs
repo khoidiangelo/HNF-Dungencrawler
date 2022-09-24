@@ -22,7 +22,7 @@ public static class Globals
     {
         playerHealth = PlayerPrefs.GetInt("playerHealth", 3);
         numberOfHearts = PlayerPrefs.GetInt("numberOfHearts", 3);
-        healPotion = PlayerPrefs.GetInt("healPotion", 0);
+        healPotion = PlayerPrefs.GetInt("healPotion", 1);
         dead = PlayerPrefs.GetInt("dead", 0);
     }
     [RuntimeInitializeOnLoadMethod]
