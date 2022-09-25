@@ -73,6 +73,7 @@ MonoBehaviour:
   health: 5
   Sprite: {fileID: 6995311822870821645}
   animator: {fileID: 6995311822870821647}
+  player: {fileID: 0}
   damage: 1
 --- !u!58 &6995311821750940404
 CircleCollider2D:
@@ -89,7 +90,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
 --- !u!1 &6995311822022254153
 GameObject:
   m_ObjectHideFlags: 0

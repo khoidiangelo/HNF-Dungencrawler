@@ -9,10 +9,12 @@ public class Player_Attack_System : MonoBehaviour
     public float Attack_Range_Sword;
     public int Attack_Angle_Sword;
     public int Attack_Damage_Sword;
+    public float coolDownTime;
+    private float coolDownCounter;
     // Start is called before the first frame update
     void Start()
     {
-
+        coolDownCounter = 0;
     }
 
     // Update is called once per frame
@@ -20,13 +22,20 @@ public class Player_Attack_System : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-
-            switch (weapon)
+            if(coolDownCounter <= 0)
             {
-                case Weapons.Sword:
-                    SwordAttack();
-                    break;
+                switch (weapon)
+                {
+                    case Weapons.Sword:
+                        SwordAttack();
+                        break;
+                }
+                coolDownCounter = coolDownTime;
             }
+        }
+        if(coolDownCounter > 0)
+        {
+            coolDownCounter -= Time.deltaTime;
         }
     }
     public void SwordAttack()

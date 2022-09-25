@@ -13,7 +13,7 @@ public class Enemy_Contorler : MonoBehaviour
     private Vector3 movement;
     private Vector3 prevPos;
     public GameObject player;
-
+    private IEnumerator coroutine;
 
     private void Awake()
     {
@@ -45,6 +45,9 @@ public class Enemy_Contorler : MonoBehaviour
     public void Damage(int damage)
     {
         this.health -= damage;
+        coroutine = SchowHit(0.2f);
+        StartCoroutine(coroutine);
+
         if (health < 0)
         {
           
@@ -52,6 +55,12 @@ public class Enemy_Contorler : MonoBehaviour
             
             Destroy(this.transform.parent.gameObject);
         }
+    }
+    private IEnumerator SchowHit(float waitTime)
+    {
+            this.Sprite.gameObject.GetComponent<SpriteRenderer>().color = new Color (1, 0, 0, 1);
+            yield return new WaitForSeconds(waitTime);
+            this.Sprite.gameObject.GetComponent<SpriteRenderer>().color = new Color (1, 1, 1, 1);
     }
 
 }
