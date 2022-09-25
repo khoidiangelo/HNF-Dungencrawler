@@ -37,10 +37,6 @@ public static class Globals
     {
 
         Debug.Log("Load Save File");
-        if(player != null)
-        {
-            Globals.currentScore = player.GetComponent<General>()?.currentScore ?? 0;
-        }
          
         Load();
         
