@@ -28,15 +28,16 @@ public class Enemy_Contorler : MonoBehaviour
         }
         movement = prevPos - transform.position;
         movement = Vector3.Normalize(movement);
+        Debug.Log(movement);
         if(Mathf.Abs(movement.x) < Mathf.Abs(movement.y))
         {
             animator.SetFloat("vertical speed",  movement.y);
-            animator.SetFloat("horizontal speed", 0);
+            animator.SetFloat("horizontal speed", 0f);
         }
         else
         {
             animator.SetFloat("horizontal speed", movement.x);
-            animator.SetFloat("vertical speed",  0);
+            animator.SetFloat("vertical speed",  0f);
         }
         agent.destination = target.position;
         Sprite.position = this.gameObject.transform.position;
