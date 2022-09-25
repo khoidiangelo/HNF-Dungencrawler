@@ -10642,8 +10642,8 @@ Tilemap:
   - first: {x: -12, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 14
+      m_TileIndex: 11
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13762,8 +13762,8 @@ Tilemap:
   - first: {x: -12, y: 5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 14
+      m_TileIndex: 11
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17723,7 +17723,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1046
+  - m_RefCount: 1048
     m_Data: {fileID: 11400000, guid: 01e13e03dcfaee975948164b2d90bdc3, type: 2}
   - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: c054ed4432727a9459eded564352557b, type: 2}
@@ -17735,7 +17735,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: e67fa7b89ec16f047a12cb557d5207ba, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 64491060d9c67d7ac9f53e7aed472a36, type: 2}
-  - m_RefCount: 24
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 05b523b6cd804d645b459ead519b8bd6, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 14afcf357c1490a61ba40ccccffe4242, type: 2}
@@ -17768,11 +17768,11 @@ Tilemap:
     m_Data: {fileID: -1944058799, guid: 28664b10ead12ae44b5ab346df17948f, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 975588166, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
-  - m_RefCount: 24
+  - m_RefCount: 22
     m_Data: {fileID: -2047451628, guid: df609de0acefd8e8eb3388e80ee9edf3, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1351417549, guid: 016041eb72b1a7b4fa3cf3f33d7b9c71, type: 3}
-  - m_RefCount: 1046
+  - m_RefCount: 1048
     m_Data: {fileID: -1079074202, guid: 562900aa0015de04ead4c5a1cd050463, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1510992318, guid: ef461023fb3707f4ea5f9320cfa15612, type: 3}
