@@ -27,6 +27,8 @@ public class DungeonSystem : MonoBehaviour
             fader.SetActive(true);
             fader.GetComponent<RawImage>().color = new Color(0,0,0,Mathf.Lerp(0f,1f,0.05f));
             nextDungeon = Random.Range(1, 4);
+            Globals.Save();
+            Debug.Log("Save");
             SceneManager.LoadScene(nextDungeon);
             Debug.Log(nextDungeon);
             

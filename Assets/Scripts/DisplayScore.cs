@@ -7,7 +7,7 @@ public class DisplayScore : MonoBehaviour
 {
     public Text scoreText;
     public GameObject player;
-    private float currentScore;
+    
 
     private void Start()
     {
@@ -16,8 +16,8 @@ public class DisplayScore : MonoBehaviour
 
     private void Update()
     {
-        currentScore = player.GetComponent<General>().currentScore;
         
-        scoreText.text = currentScore.ToString("F0");
+        
+        scoreText.text = Globals.currentScore.ToString("F0");
     }
 }
