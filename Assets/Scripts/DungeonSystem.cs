@@ -23,9 +23,9 @@ public class DungeonSystem : MonoBehaviour
 
         if(gonext)
         {
-            Time.timeScale = 0;
+            /*Time.timeScale = 0;
             fader.SetActive(true);
-            fader.GetComponent<RawImage>().color = new Color(0,0,0,Mathf.Lerp(0f,1f,0.05f));
+            fader.GetComponent<RawImage>().color = new Color(0,0,0,Mathf.Lerp(0f,1f,0.05f));*/
             nextDungeon = Random.Range(1, 4);
             Globals.Save();
             Debug.Log("Save");
