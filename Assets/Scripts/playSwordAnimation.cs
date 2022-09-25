@@ -15,7 +15,7 @@ public class playSwordAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
 
             animator.SetInteger("Horrizontal" ,(int)Movement.Instance.Direction.x);

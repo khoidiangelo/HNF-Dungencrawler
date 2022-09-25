@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
@@ -590,6 +590,7 @@ MonoBehaviour:
   deadPanel: {fileID: 1611202931}
   respawnPoint: {fileID: 892603468}
   player: {fileID: 1517392435}
+  nextDungeon: 0
 --- !u!114 &134834568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   deadPanel: {fileID: 2068893315}
   respawnPoint: {fileID: 892603468}
   player: {fileID: 1517392435}
+  nextDungeon: 0
 --- !u!1 &584350978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,7 +1981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
@@ -2159,7 +2161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
@@ -5532,7 +5534,6 @@ MonoBehaviour:
   Attack_Range_Sword: 10
   Attack_Angle_Sword: 90
   Attack_Damage_Sword: 1
-  Thing: {fileID: 9105513992466500453, guid: d9bce90c0a72e124fb168361b02866ce, type: 3}
 --- !u!114 &1517392445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5603,7 +5604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6995311822022254153, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb7c2710b6b61948994ce03e735136c, type: 3}
