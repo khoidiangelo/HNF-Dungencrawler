@@ -72,7 +72,7 @@ public class HealthSystem : MonoBehaviour
     void check_HealPotion()
     {
 
-        if (Input.GetKeyDown(KeyCode.H) && Globals.healPotion > 0 && current_Health != numberOfHearts)
+        if (Input.GetButtonDown("Fire1") && Globals.healPotion > 0 && current_Health != numberOfHearts)
         {
             Globals.healPotion -= 1;
             this.DamagePlayer(-1);

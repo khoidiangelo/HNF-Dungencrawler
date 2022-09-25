@@ -20,7 +20,7 @@ public class Player_Attack_System : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Jump"))
         {
             if(coolDownCounter <= 0)
             {
